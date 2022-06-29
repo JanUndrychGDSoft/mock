@@ -10,7 +10,7 @@ class TestEndpoint {
 
     companion object {
         private val ID = (0..100_000_000).random()
-        private const val VERSION = 1;
+        private const val VERSION = 2
     }
 
     @Autowired
