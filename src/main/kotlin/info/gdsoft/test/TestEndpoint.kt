@@ -10,6 +10,7 @@ class TestEndpoint {
 
     companion object {
         private val ID = (0..100_000_000).random()
+        private const val VERSION = 1;
     }
 
     @Autowired
@@ -20,6 +21,15 @@ class TestEndpoint {
         .select(Strs::class.java)
         .all()
 
-    @GetMapping("/node-probe")
-    fun probe() = ID
+    @GetMapping("/node-id")
+    fun nodeId() = ID
+
+    @GetMapping("/version")
+    fun version() = VERSION
+
+    @GetMapping("/probe")
+    fun probe() = """
+        Node Id: $ID
+        Version: $VERSION
+    """.trimIndent()
 }
