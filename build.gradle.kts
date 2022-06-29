@@ -27,6 +27,8 @@ dependencies {
 	testImplementation("io.projectreactor:reactor-test")
 	runtimeOnly("org.postgresql:r2dbc-postgresql")
 
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
 	implementation("org.flywaydb:flyway-core")
 	runtimeOnly("org.postgresql:postgresql")
 	runtimeOnly("org.springframework.boot:spring-boot-starter-jdbc")
